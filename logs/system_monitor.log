@@ -1,0 +1,1004 @@
+2025-02-04 21:29:15,668 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 21:29:15,668 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 21:29:28,274 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:29:28] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:29:29,116 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:29:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-04 21:31:58,774 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 21:31:58,774 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 21:32:01,685 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:32:01] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:32:32,870 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:32:32] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:34:17,023 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:34:17] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2025-02-04 21:34:47,930 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:34:47] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2025-02-04 21:34:56,969 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:34:56] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2025-02-04 21:36:06,802 - main - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/src/main.py", line 82, in login
+    token = generate_token('admin')
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/src/auth.py", line 13, in generate_token
+    token = jwt.encode(payload, os.getenv('SECRET_KEY'), algorithm='HS256')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 73, in encode
+    return api_jws.encode(
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/api_jws.py", line 160, in encode
+    key = alg_obj.prepare_key(key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/algorithms.py", line 265, in prepare_key
+    key_bytes = force_bytes(key)
+                ^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/utils.py", line 22, in force_bytes
+    raise TypeError("Expected a string value")
+TypeError: Expected a string value
+2025-02-04 21:36:06,822 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:36:06] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-02-04 21:36:28,050 - main - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/src/main.py", line 82, in login
+    token = generate_token('admin')
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/src/auth.py", line 13, in generate_token
+    token = jwt.encode(payload, os.getenv('SECRET_KEY'), algorithm='HS256')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 73, in encode
+    return api_jws.encode(
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/api_jws.py", line 160, in encode
+    key = alg_obj.prepare_key(key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/algorithms.py", line 265, in prepare_key
+    key_bytes = force_bytes(key)
+                ^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/utils.py", line 22, in force_bytes
+    raise TypeError("Expected a string value")
+TypeError: Expected a string value
+2025-02-04 21:36:28,058 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:36:28] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-02-04 21:38:15,169 - main - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/src/main.py", line 82, in login
+    def login():
+                 
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/src/auth.py", line 13, in generate_token
+    secret_key = os.getenv('SECRET_KEY')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 73, in encode
+    return api_jws.encode(
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/api_jws.py", line 160, in encode
+    key = alg_obj.prepare_key(key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/algorithms.py", line 265, in prepare_key
+    key_bytes = force_bytes(key)
+                ^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/utils.py", line 22, in force_bytes
+    raise TypeError("Expected a string value")
+TypeError: Expected a string value
+2025-02-04 21:38:15,175 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:38:15] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-02-04 21:38:16,344 - main - ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/src/main.py", line 82, in login
+    def login():
+                 
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/src/auth.py", line 13, in generate_token
+    secret_key = os.getenv('SECRET_KEY')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/api_jwt.py", line 73, in encode
+    return api_jws.encode(
+           ^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/api_jws.py", line 160, in encode
+    key = alg_obj.prepare_key(key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/algorithms.py", line 265, in prepare_key
+    key_bytes = force_bytes(key)
+                ^^^^^^^^^^^^^^^^
+  File "/Users/andrewjaffray/Documents/Year2/Context of the Code/JaffProject/venv/lib/python3.11/site-packages/jwt/utils.py", line 22, in force_bytes
+    raise TypeError("Expected a string value")
+TypeError: Expected a string value
+2025-02-04 21:38:16,345 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:38:16] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-02-04 21:38:25,163 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 21:38:25,163 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 21:38:31,780 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:38:31] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:38:36,494 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:38:36] "POST /login HTTP/1.1" 200 -
+2025-02-04 21:40:25,913 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:40:25] "POST /login HTTP/1.1" 200 -
+2025-02-04 21:40:30,795 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:40:30] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:42:33,982 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:42:33] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+2025-02-04 21:42:46,557 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:42:46] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:44:17,485 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 21:44:17,486 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 21:44:21,806 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:44:21] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:44:36,792 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:44:36] "POST /login HTTP/1.1" 200 -
+2025-02-04 21:44:44,058 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:44:44] "[31m[1mGET /login HTTP/1.1[0m" 405 -
+2025-02-04 21:45:57,097 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:45:57] "GET / HTTP/1.1" 200 -
+2025-02-04 21:46:05,604 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:46:05] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:46:06,146 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:46:06] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:46:20,861 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:46:20] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:46:32,733 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:46:32] "[31m[1mPOST /login HTTP/1.1[0m" 415 -
+2025-02-04 21:47:39,610 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:47:39] "POST /login HTTP/1.1" 200 -
+2025-02-04 21:48:02,832 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:48:02] "POST /login HTTP/1.1" 200 -
+2025-02-04 21:48:07,600 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:48:07] "GET / HTTP/1.1" 200 -
+2025-02-04 21:48:25,349 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:48:25] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-04 21:51:21,312 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:51:21] "GET / HTTP/1.1" 200 -
+2025-02-04 21:51:23,127 - system_monitor - ERROR - Error collecting system metrics: (pid=0)
+2025-02-04 21:51:23,128 - auth - ERROR - Unexpected error in authentication: (pid=0)
+2025-02-04 21:51:23,129 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:51:23] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2025-02-04 21:52:23,181 - system_monitor - ERROR - Error collecting system metrics: (pid=0)
+2025-02-04 21:52:23,186 - auth - ERROR - Unexpected error in authentication: (pid=0)
+2025-02-04 21:52:23,188 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:52:23] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2025-02-04 21:53:23,157 - system_monitor - ERROR - Error collecting system metrics: (pid=0)
+2025-02-04 21:53:23,162 - auth - ERROR - Unexpected error in authentication: (pid=0)
+2025-02-04 21:53:23,163 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:53:23] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2025-02-04 21:54:23,212 - system_monitor - ERROR - Error collecting system metrics: (pid=0)
+2025-02-04 21:54:23,217 - auth - ERROR - Unexpected error in authentication: (pid=0)
+2025-02-04 21:54:23,219 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:54:23] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2025-02-04 21:55:23,472 - system_monitor - ERROR - Error collecting system metrics: (pid=0)
+2025-02-04 21:55:23,480 - auth - ERROR - Unexpected error in authentication: (pid=0)
+2025-02-04 21:55:23,482 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:55:23] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2025-02-04 21:56:23,522 - system_monitor - ERROR - Error collecting system metrics: (pid=0)
+2025-02-04 21:56:23,528 - auth - ERROR - Unexpected error in authentication: (pid=0)
+2025-02-04 21:56:23,530 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:56:23] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2025-02-04 21:57:14,319 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:57:14] "GET / HTTP/1.1" 200 -
+2025-02-04 21:57:15,002 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:57:15] "GET / HTTP/1.1" 200 -
+2025-02-04 21:57:15,472 - system_monitor - ERROR - Error collecting system metrics: (pid=0)
+2025-02-04 21:57:15,474 - auth - ERROR - Unexpected error in authentication: (pid=0)
+2025-02-04 21:57:15,474 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:57:15] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2025-02-04 21:57:16,049 - system_monitor - ERROR - Error collecting system metrics: (pid=0)
+2025-02-04 21:57:16,049 - auth - ERROR - Unexpected error in authentication: (pid=0)
+2025-02-04 21:57:16,049 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:57:16] "[35m[1mGET /metrics HTTP/1.1[0m" 500 -
+2025-02-04 21:57:45,322 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 21:57:45,323 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 21:57:48,604 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:57:48] "GET / HTTP/1.1" 200 -
+2025-02-04 21:57:50,760 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:57:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:57:54,747 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:57:54] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:57:59,712 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:57:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:04,927 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:09,765 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:15,776 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:16,852 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:20,475 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:25,490 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:30,595 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:35,462 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:40,461 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:45,631 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:50,499 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:58:55,500 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:58:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:00,588 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:05,438 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:10,473 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:16,538 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:34,458 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:34] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:35,526 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:39,727 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:39] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:44,737 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:44] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:49,848 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:49] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 21:59:54,745 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 21:59:54] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:00,583 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:05,439 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:10,466 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:15,583 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:16,664 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:20,439 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:25,481 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:30,965 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:35,478 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:40,487 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:45,563 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:50,481 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:00:55,456 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:00:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:00,580 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:04,753 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:10,447 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:15,566 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:16,656 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:20,447 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:25,459 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:30,564 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:35,468 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:40,430 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:45,554 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:50,424 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:01:55,454 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:01:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:00,581 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:05,440 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:10,508 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:15,536 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:16,628 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:20,455 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:25,493 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:30,647 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:35,439 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:40,445 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:45,572 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:50,456 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:02:55,424 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:02:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:00,601 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:05,466 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:10,434 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:15,559 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:17,439 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:17] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:20,471 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:25,434 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:34,715 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:34] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:40,470 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:45,573 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:48,645 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:48] "GET / HTTP/1.1" 200 -
+2025-02-04 22:03:49,733 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:49] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:03:49,888 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:03:49] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:00,332 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 22:04:00,332 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 22:04:04,149 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:04] "GET / HTTP/1.1" 200 -
+2025-02-04 22:04:05,707 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:06,770 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:10,436 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:15,450 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:18,595 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:18] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:20,445 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:29,496 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 22:04:29,496 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 22:04:31,653 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:31] "GET / HTTP/1.1" 200 -
+2025-02-04 22:04:33,166 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:33] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:35,451 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:37,749 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:37] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:40,448 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:42,774 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:42] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:45,558 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:47,751 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:47] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:50,449 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:53,469 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:58,555 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:58] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:04:59,670 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:04:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:03,447 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:05,459 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:08,444 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:08] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:12,879 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:17,774 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:17] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:19,455 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:19] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:23,581 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:28,454 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:28] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:33,421 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:33] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:38,001 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:38] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:05:48,045 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 22:05:48,046 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 22:05:53,825 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:05:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:19,714 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 22:06:19,714 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 22:06:21,998 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:21] "GET / HTTP/1.1" 200 -
+2025-02-04 22:06:23,509 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:24,584 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:24] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:28,464 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:28] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:33,431 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:33] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:38,793 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:38] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:43,459 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:43] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:48,441 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:48] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:53,554 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:58,464 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:58] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:06:59,541 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:06:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:07:03,444 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:07:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:07:05,525 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:07:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:07:21,602 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:07:21] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:07:23,419 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:07:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:07:59,656 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:07:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:08:00,735 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:08:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:08:05,459 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:08:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:08:22,639 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:08:22] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:08:23,701 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:08:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:08:59,764 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:08:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:09:00,835 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:09:05,441 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:09:19,423 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:19] "GET / HTTP/1.1" 200 -
+2025-02-04 22:09:20,753 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:09:22,159 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:22] "GET / HTTP/1.1" 200 -
+2025-02-04 22:09:23,292 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:09:24,363 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:24] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:09:37,167 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 22:09:37,168 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 22:09:43,180 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:43] "GET / HTTP/1.1" 200 -
+2025-02-04 22:09:45,359 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:09:59,629 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:09:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:10:00,690 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:10:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:10:08,391 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 22:10:08,391 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 22:10:10,666 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:10:10] "GET / HTTP/1.1" 200 -
+2025-02-04 22:10:12,122 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:10:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:10:13,464 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:10:13] "GET / HTTP/1.1" 200 -
+2025-02-04 22:10:14,584 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:10:14] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:10:23,568 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:10:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:10:24,668 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:10:24] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:10:44,550 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:10:44] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:10:59,642 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:10:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:00,719 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:16,566 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 22:11:16,566 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 22:11:19,015 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:19] "GET / HTTP/1.1" 200 -
+2025-02-04 22:11:20,659 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:23,461 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:25,103 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:26,176 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:30,128 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:35,245 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:40,096 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:44,447 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:44] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:45,599 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:50,189 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:55,135 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:11:59,586 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:11:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:00,674 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:01,770 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:05,183 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:08,472 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:08] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:10,230 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:15,235 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:16,327 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:20,235 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:23,539 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:25,191 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:26,562 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:30,538 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:35,581 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:40,224 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:44,476 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:44] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:45,539 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:50,612 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:55,576 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:12:59,506 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:12:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:00,602 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:01,772 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:05,509 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:09,572 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:10,649 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:15,247 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:16,301 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:20,229 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:23,511 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:25,276 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:27,498 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:27] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:30,477 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:35,220 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:40,587 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:44,504 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:44] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:45,589 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:50,590 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:55,614 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:13:59,527 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:13:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:00,584 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:01,706 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:05,595 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:06,444 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:06] "GET / HTTP/1.1" 200 -
+2025-02-04 22:14:07,638 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:07] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:10,542 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:13,524 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:13] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:23,823 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 22:14:23,824 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 22:14:26,622 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:26] "GET / HTTP/1.1" 200 -
+2025-02-04 22:14:28,166 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:28] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:29,264 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:29] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:30,322 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:32,727 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:32] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:33,835 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:33] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:38,542 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:38] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:39,744 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:39] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:43,492 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:43] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:44,575 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:44] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:45,670 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:48,502 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:48] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:49,587 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:49] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:53,605 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:54,694 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:54] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:58,491 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:58] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:14:59,547 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:14:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:00,634 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:01,723 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:03,504 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:04,708 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:08,510 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:08] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:09,589 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:11,556 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:11] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:13,456 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:13] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:15,605 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:18,508 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:18] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:24,165 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:24] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:25,258 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:27,889 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:27] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:29,560 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:29] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:32,734 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:32] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:38,593 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:38] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:43,502 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:43] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:45,491 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:48,545 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:48] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:53,613 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:58,489 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:58] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:15:59,573 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:15:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:00,653 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:01,734 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:03,493 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:08,640 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:08] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:12,483 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:13,565 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:13] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:16,491 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:18,487 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:18] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:23,614 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:25,532 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:27,727 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:27] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:30,475 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:32,736 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:32] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:32,771 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:32] "GET / HTTP/1.1" 200 -
+2025-02-04 22:16:33,907 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:33] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:35,443 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:35] "GET / HTTP/1.1" 200 -
+2025-02-04 22:16:36,684 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:16:57,757 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-04 22:16:57,757 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-04 22:16:59,817 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:16:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:00,297 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:00] "GET / HTTP/1.1" 200 -
+2025-02-04 22:17:00,911 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:02,001 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:03,091 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:04,179 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:06,413 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:07,505 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:07] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:11,542 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:11] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:12,628 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:13,710 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:13] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:16,401 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:17,482 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:17] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:18,565 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:18] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:21,411 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:21] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:22,612 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:22] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:26,431 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:27,488 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:27] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:28,573 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:28] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:31,401 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:31] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:32,485 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:32] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:33,672 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:33] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:36,409 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:37,547 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:37] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:41,412 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:46,523 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:46] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:47,610 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:47] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:51,414 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:51] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:56,409 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:56] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:17:59,578 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:17:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:00,661 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:01,753 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:02,846 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:03,906 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:06,410 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:11,510 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:11] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:14,504 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:14] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:16,400 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:18,502 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:18] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:21,412 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:21] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:26,520 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:27,605 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:27] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:31,423 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:31] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:32,502 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:32] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:36,408 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:41,576 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:46,410 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:46] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:48,508 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:48] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:51,407 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:51] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:56,520 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:56] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:18:59,511 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:18:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:00,590 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:01,760 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:02,832 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:03,909 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:06,413 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:11,539 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:11] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:15,513 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:16,610 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:19,533 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:19] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:21,425 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:21] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:26,515 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:28,498 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:28] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:31,416 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:31] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:33,494 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:33] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:36,410 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:41,517 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:46,406 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:46] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:49,494 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:49] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:51,402 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:51] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:56,541 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:56] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:19:59,510 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:19:59] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:00,566 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:01,622 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:02,700 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:03,789 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:06,403 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:11,608 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:11] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:16,407 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:17,472 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:17] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:20,495 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:21,576 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:21] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:26,521 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:29,490 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:29] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:31,400 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:31] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:34,503 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:34] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:36,401 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:41,607 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:46,507 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:46] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:50,494 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:51,580 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:51] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:53,942 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:54,559 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:54] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:56,188 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:56] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:56,925 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:56] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:20:58,008 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:20:58] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:01,403 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:06,501 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:11,413 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:11] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:16,406 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:21,503 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:21] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:26,412 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:31,413 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:31] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:36,525 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:41,401 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:46,398 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:46] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:51,528 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:51] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:21:56,438 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:21:56] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:01,401 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:06,584 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:11,516 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:11] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:16,487 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:21,598 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:21] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:26,506 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:31,500 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:31] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:36,637 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:41,498 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:46,500 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:46] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:51,594 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:51] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:22:56,506 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:22:56] "GET /metrics HTTP/1.1" 200 -
+2025-02-04 22:23:01,433 - werkzeug - INFO - 127.0.0.1 - - [04/Feb/2025 22:23:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-05 10:10:55,288 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-05 10:10:55,290 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-05 10:11:00,382 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2025 10:11:00] "GET / HTTP/1.1" 200 -
+2025-02-05 10:11:03,204 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2025 10:11:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-05 10:11:07,353 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2025 10:11:07] "GET /metrics HTTP/1.1" 200 -
+2025-02-05 10:11:12,144 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2025 10:11:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-05 10:11:16,728 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2025 10:11:16] "GET /metrics HTTP/1.1" 200 -
+2025-02-05 10:11:19,701 - werkzeug - INFO - 127.0.0.1 - - [05/Feb/2025 10:11:19] "GET /metrics HTTP/1.1" 200 -
+2025-02-07 09:46:03,331 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-07 09:46:03,333 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-07 09:46:06,474 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 09:46:06] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-07 09:46:07,585 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 09:46:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-07 09:46:22,427 - auth - WARNING - Expired token received
+2025-02-07 09:46:22,432 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 09:46:22] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-07 09:46:23,313 - auth - WARNING - Expired token received
+2025-02-07 09:46:23,314 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 09:46:23] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-07 10:03:25,360 - werkzeug - INFO - 127.0.0.1 - - [07/Feb/2025 10:03:25] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2025-02-08 11:28:01,050 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-08 11:28:01,053 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-08 11:28:28,870 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:28:28] "[31m[1mGET / HTTP/1.1[0m" 401 -
+2025-02-08 11:34:20,688 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:34:20] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2025-02-08 11:34:40,287 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:34:40] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2025-02-08 11:35:01,348 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:35:01] "POST /login HTTP/1.1" 200 -
+2025-02-08 11:35:14,856 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:35:14] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2025-02-08 11:35:25,942 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:35:25] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2025-02-08 11:37:09,903 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-08 11:37:09,904 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-08 11:37:19,030 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:37:19] "GET / HTTP/1.1" 200 -
+2025-02-08 11:37:22,349 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:37:22] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:37:25,208 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:37:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:37:30,252 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:37:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:37:35,294 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:37:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:37:40,236 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:37:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:37:45,369 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:37:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:37:50,205 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:37:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:37:55,538 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:37:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:00,229 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:05,256 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:10,275 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:15,210 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:20,283 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:25,282 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:30,217 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:35,328 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:40,702 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:45,709 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:50,759 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:38:55,688 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:38:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:39:00,732 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:39:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:39:05,724 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:39:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:39:10,864 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:39:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:39:15,734 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:39:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:39:20,719 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:39:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:39:25,658 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:39:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:39:30,704 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:39:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:40:09,907 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:40:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:40:27,302 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:40:27] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:40:30,227 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:40:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:40:35,249 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:40:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:40:40,348 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:40:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:40:45,248 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:40:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:40:50,460 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:40:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:40:55,705 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:40:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:00,784 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:05,786 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:10,743 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:15,740 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:20,681 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:25,700 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:32,918 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:32] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:35,724 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:40,710 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:45,764 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:45] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:41:50,698 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:41:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:42:10,546 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:42:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:43:12,820 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:43:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:43:25,703 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:43:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:43:26,837 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:43:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:43:30,262 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:43:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:43:35,703 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:43:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:43:40,845 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:43:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:44:42,074 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:44:42] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:45:09,924 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:45:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:46:09,938 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:46:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 11:47:09,957 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 11:47:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 12:03:20,644 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 12:03:23,061 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 12:03:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 12:04:09,277 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 12:04:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 12:20:46,920 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 12:20:47,145 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 12:20:47] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 12:21:06,464 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 12:21:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 12:22:06,506 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 12:22:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 12:38:15,107 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 12:38:15,372 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 12:38:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 12:54:13,751 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 12:54:13,999 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 12:54:13] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 12:55:03,686 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 12:55:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 12:56:03,534 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 12:56:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:12:13,395 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 13:12:13,727 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:12:13] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:13:02,782 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:13:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:14:02,421 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:14:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:15:02,679 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:15:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:35:22,182 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 13:35:22,451 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:35:22] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:36:12,222 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:36:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:37:12,383 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:37:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:38:12,120 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:38:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:39:12,292 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:39:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:40:12,199 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:40:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:41:12,223 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:41:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:42:12,194 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:42:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:43:12,173 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:43:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:44:12,183 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:44:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:45:12,424 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:45:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:46:12,451 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:46:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:47:12,206 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:47:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:48:12,189 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:48:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:49:12,127 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:49:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:50:12,180 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:50:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:51:12,201 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:51:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:52:12,177 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:52:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:53:12,355 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:53:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:54:12,524 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:54:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:55:12,298 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:55:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:56:12,194 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:56:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:57:12,381 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:57:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:58:12,150 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:58:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 13:59:12,100 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 13:59:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:00:12,129 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:00:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:01:12,389 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:01:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:02:12,417 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:02:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:03:12,415 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:03:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:04:12,568 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:04:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:05:12,520 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:05:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:06:12,327 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:06:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:07:12,505 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:07:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:08:12,137 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:08:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:09:12,426 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:09:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:10:12,375 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:10:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:11:12,179 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:11:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:12:12,179 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:12:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:13:12,334 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:13:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:14:12,375 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:14:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:15:12,493 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:15:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:16:12,492 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:16:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 14:24:25,249 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 14:24:25,499 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 14:24:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 15:19:31,082 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 15:19:31,465 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 15:19:31] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 16:24:08,708 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 16:24:10,219 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 16:24:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 17:16:15,007 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 17:16:15,642 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 17:16:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 18:52:14,474 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 18:52:17,001 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 18:52:17] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 18:52:42,071 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 18:52:42] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 19:05:01,226 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 19:05:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 19:21:25,348 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 19:21:26,207 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 19:21:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 20:18:33,659 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 20:18:34,269 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:18:34] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 20:42:22,113 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 20:42:22,467 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 20:42:22] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 21:13:50,767 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:13:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 21:21:12,572 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 21:52:21,952 - yfinance - ERROR - $GOOGL: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 21:52:22,756 - yfinance - ERROR - $MSFT: possibly delisted; no price data found  (1d 2025-02-07 -> 2025-02-09)
+2025-02-08 21:52:22,807 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 21:52:22] "GET /metrics HTTP/1.1" 200 -
+2025-02-08 23:36:06,876 - werkzeug - INFO - 127.0.0.1 - - [08/Feb/2025 23:36:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 00:22:09,062 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-08 -> 2025-02-10)
+2025-02-09 00:22:09,595 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 00:22:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 00:22:10,789 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 00:22:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 01:09:36,102 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 01:09:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 01:30:09,386 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-08 -> 2025-02-10)
+2025-02-09 01:30:09,701 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 01:30:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 03:11:17,561 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-08 -> 2025-02-10)
+2025-02-09 03:11:18,523 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 03:11:18] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 05:13:45,686 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-08 -> 2025-02-10)
+2025-02-09 05:30:25,386 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 05:30:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 06:02:57,081 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-08 -> 2025-02-10)
+2025-02-09 06:02:57,680 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 06:02:57] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 08:06:00,017 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-08 -> 2025-02-10)
+2025-02-09 08:06:00,487 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 08:06:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 11:47:38,303 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-08 -> 2025-02-10)
+2025-02-09 11:47:38,731 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 11:47:38] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 12:28:01,760 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-08 -> 2025-02-10)
+2025-02-09 12:28:02,128 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 12:28:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 14:10:15,995 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-08 -> 2025-02-10)
+2025-02-09 14:10:18,082 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 14:10:18] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 14:11:37,885 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 14:11:37] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 14:12:10,521 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 14:12:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 14:12:49,746 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 14:12:49] "GET /metrics HTTP/1.1" 200 -
+2025-02-09 14:12:50,831 - werkzeug - INFO - 127.0.0.1 - - [09/Feb/2025 14:12:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:35:21,558 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-21 10:35:21,559 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-21 10:35:25,359 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:35:25] "GET / HTTP/1.1" 200 -
+2025-02-21 10:35:25,449 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:35:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-21 10:35:41,878 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:35:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:35:48,379 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:35:48] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:35:54,688 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:35:54] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:01,455 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:10,534 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:17,761 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:17] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:17,797 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:17] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:30,199 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:30] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:41,225 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:44,619 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:44] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:47,360 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:47] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:49,516 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:49] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:53,811 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:36:57,595 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:36:57] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:02,876 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:13,217 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:13] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:13,348 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:13] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:19,287 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:19] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:22,724 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:22] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:36,313 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:40,628 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:50,904 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:55,746 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:55,830 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:55] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:37:57,880 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:37:57] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:05,116 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:08,594 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:08] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:12,162 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:24,488 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:24] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:24,499 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:24] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:28,500 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:28] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:29,635 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:29] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:35,180 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:40,428 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:46,377 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:46] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:50,797 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:50,813 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:50] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:38:57,598 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:38:57] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:01,696 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:06,555 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:12,602 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:12] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:18,358 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:18] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:23,634 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:29,505 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:29] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:35,217 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:42,655 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:42] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:46,396 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:46] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:48,166 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:48] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:52,686 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:52] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:39:57,596 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:39:57] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:40:03,182 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:40:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:40:08,237 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:40:08] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:40:14,586 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:40:14] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:40:19,429 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:40:19] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:40:36,765 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:40:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:41:40,334 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:41:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:42:39,255 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:42:39] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:43:37,194 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:43:37] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:44:34,835 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:44:34] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:45:34,615 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:45:34] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:46:35,775 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:46:35] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:47:37,680 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:47:37] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:48:39,086 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:48:39] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:49:39,010 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:49:39] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:50:36,587 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:50:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:51:38,946 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:51:38] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:52:41,658 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:52:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:53:37,600 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:53:37] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 10:54:39,280 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 10:54:39] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:05:17,257 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-20 -> 2025-02-22)
+2025-02-21 11:05:48,265 - yfinance - ERROR - $GOOGL: possibly delisted; no price data found  (1d 2025-02-20 -> 2025-02-22)
+2025-02-21 11:05:51,876 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:05:51] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:06:03,778 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:06:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:07:05,541 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:07:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:08:04,912 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:08:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:09:03,894 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:09:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:10:02,607 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:10:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:11:03,918 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:11:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:12:09,897 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:12:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:13:05,223 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:13:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:14:02,869 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:14:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:15:01,366 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:15:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:16:02,705 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:16:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:17:02,536 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:17:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:17:21,684 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:17:21] "GET / HTTP/1.1" 200 -
+2025-02-21 11:17:25,992 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:17:25] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:17:27,627 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:17:27] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:17:27,636 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:17:27] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:17:34,869 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:17:34] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:17:40,174 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:17:40] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:17:47,025 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:17:47] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:17:54,703 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:17:54] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:00,672 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:07,001 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:07] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:15,207 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:23,993 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:29,731 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:29] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:34,743 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:34] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:41,758 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:41] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:46,566 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:46] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:53,544 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:57,994 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:57] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:18:58,009 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:18:58] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:19:03,372 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:19:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:19:09,280 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:19:09] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:19:15,337 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:19:15] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:19:22,617 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:19:22] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:19:29,723 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:19:29] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:19:34,069 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:19:34] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:19:36,129 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:19:36] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:19:43,284 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:19:43] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:20:02,133 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:20:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:21:02,747 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:21:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:22:00,876 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:22:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:23:02,549 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:23:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:24:03,317 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:24:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:25:04,221 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:25:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:26:03,681 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:26:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:27:01,891 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:27:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:28:04,885 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:28:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:29:02,012 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:29:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:30:03,697 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:30:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:31:04,126 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:31:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:32:02,953 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:32:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:33:03,512 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:33:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:34:04,241 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:34:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:35:01,841 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:35:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:36:01,177 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:36:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:37:02,134 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:37:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:38:07,785 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:38:07] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:39:02,769 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:39:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:40:06,130 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:40:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:41:06,441 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:41:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:42:05,104 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:42:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:43:02,566 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:43:02] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:44:04,584 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:44:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:45:01,515 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:45:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:46:03,205 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:46:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:46:13,129 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:46:13] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:46:21,082 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:46:21] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:46:29,519 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:46:29] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:46:37,671 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:46:37] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:46:47,263 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:46:47] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:46:54,456 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:46:54] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:46:58,919 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:46:58] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:47:01,586 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:47:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:47:10,119 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:47:10] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:47:18,721 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:47:18] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:47:20,194 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:47:20] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:47:23,929 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:47:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:47:26,479 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:47:26] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:48:04,747 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:48:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:49:08,112 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:49:08] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:50:03,339 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:50:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:51:03,899 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:51:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:52:04,472 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:52:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:53:05,190 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:53:05] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:54:03,494 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:54:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:55:01,518 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:55:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:56:03,726 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:56:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:57:04,508 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:57:04] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:58:03,266 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:58:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 11:59:01,833 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 11:59:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:00:03,960 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:00:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:01:00,517 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:01:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:02:03,980 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:02:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:03:01,522 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:03:01] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:04:00,786 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:04:00] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:50:21,135 - yfinance - ERROR - $AAPL: possibly delisted; no price data found  (1d 2025-02-20 -> 2025-02-22)
+2025-02-21 12:50:51,608 - yfinance - ERROR - $GOOGL: possibly delisted; no price data found  (1d 2025-02-20 -> 2025-02-22)
+2025-02-21 12:50:53,175 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:50:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:51:03,272 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:51:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:52:03,288 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:52:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:53:03,155 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:53:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:54:03,251 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:54:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:55:03,440 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:55:14,449 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:5000
+2025-02-21 12:55:14,451 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-02-21 12:55:19,415 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:19] "GET / HTTP/1.1" 200 -
+2025-02-21 12:55:23,720 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:23] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:55:27,869 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:27] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:55:32,756 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:32] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:55:37,473 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:37] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:55:42,162 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:42] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:55:47,222 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:47] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:55:53,052 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:53] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:55:57,701 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:55:57] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:56:03,104 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:56:03] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:56:06,190 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:56:06] "GET /metrics HTTP/1.1" 200 -
+2025-02-21 12:56:08,998 - werkzeug - INFO - 127.0.0.1 - - [21/Feb/2025 12:56:08] "GET /metrics HTTP/1.1" 200 -

@@ -1,0 +1,28 @@
+{
+    "logging": {
+        "level": "INFO",
+        "file_path": "logs/system_monitor.log",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    },
+    "monitoring": {
+        "interval": 60,
+        "stocks": {
+            "symbols": ["AAPL", "GOOGL", "MSFT"],
+            "metrics": ["price", "volume", "market_cap"]
+        },
+        "system": {
+            "metrics": ["cpu_percent", "memory_percent", "running_processes", "thread_count"]
+        },
+        "history_size": 1000
+    },
+    "server": {
+        "host": "localhost",
+        "port": 5000
+    },
+    "database": {
+        "path": "monitoring.db"
+    },
+    "commands": {
+        "allowed": ["restart_app", "clear_cache"]
+    }
+} 
