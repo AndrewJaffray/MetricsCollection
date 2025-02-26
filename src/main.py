@@ -11,36 +11,21 @@ from auth import require_auth, generate_token
 from remote_control import RemoteControl
 from dotenv import load_dotenv
 import os
+from custom_logging.logger import LoggerSingleton
+from config.config_loader import load_config
 
 # Add this near the top of the file, before any code that uses environment variables
 load_dotenv()
 
-def setup_logging(config):
-    """Configure logging based on config settings."""
-    # Create logs directory if it doesn't exist
-    log_path = Path(config['logging']['file_path'])
-    log_path.parent.mkdir(parents=True, exist_ok=True)
-    
-    logging.basicConfig(
-        level=config['logging']['level'],
-        format=config['logging']['format'],
-        handlers=[
-            logging.FileHandler(config['logging']['file_path']),
-            logging.StreamHandler()
-        ]
-    )
-
-def load_config():
-    """Load configuration from JSON file."""
-    config_path = Path('config/config.json')
-    with open(config_path) as f:
-        return json.load(f)
-
 def main():
+    
     # Load configuration
-    config = load_config()
-    setup_logging(config)
-    logger = logging.getLogger(__name__)
+    config_path = Path('src/config/config.json')
+    config = load_config(config_path)
+    
+    # Initialize logging singleton
+    LoggerSingleton(config)
+    logger = LoggerSingleton.get_logger(__name__)
 
     try:
         # Initialize components
@@ -54,7 +39,7 @@ def main():
         app = Flask(__name__)
         
         @app.route('/metrics')
-      #  @require_auth
+        # @require_auth
         def get_metrics():
             system_data = system_monitor.get_metrics()
             stock_data = stock_monitor.get_metrics()
@@ -62,12 +47,12 @@ def main():
             return processed_data
 
         @app.route('/')
-       # @require_auth
+        # @require_auth
         def dashboard():
             return visualizer.get_dashboard()
 
         @app.route('/command', methods=['POST'])
-      #  @require_auth
+        # @require_auth
         def execute_command():
             data = request.get_json()
             command = data.get('command')
