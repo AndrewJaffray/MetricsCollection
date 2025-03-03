@@ -11,6 +11,10 @@ class DataProcessor:
 
     def process(self, system_data, stock_data):
         """Process and combine system and stock metrics."""
+        self.logger.debug("Debug message")
+        self.logger.info("Info message")
+        self.logger.warning("Warning message")
+        self.logger.error("Error message")
         return {
             'system': system_data,
             'stocks': stock_data,
@@ -47,19 +51,24 @@ class DataProcessor:
     
     def _get_stock_summary(self, stock_data):
         """Generate stock summary."""
-        summary = {
-            'total_stocks': len(stock_data['data']),
-            'stocks_up': 0,
-            'stocks_down': 0
-        }
-        
-        for symbol, data in stock_data['data'].items():
-            if 'change' in data:
-                if data['change'] > 0:
-                    summary['stocks_up'] += 1
-                elif data['change'] < 0:
-                    summary['stocks_down'] += 1
-                    
+        summary = {}
+        for symbol, data in stock_data.items():
+            # Debugging: Log the type and content of data
+            self.logger.debug(f"Processing stock data for {symbol}: {data} (type: {type(data)})")
+            
+            if isinstance(data, dict):
+                change = data.get('change')
+                if change is not None:
+                    if change > 0:
+                        summary[symbol] = 'up'
+                    elif change < 0:
+                        summary[symbol] = 'down'
+                    else:
+                        summary[symbol] = 'no change'
+                else:
+                    summary[symbol] = 'no data'
+            else:
+                summary[symbol] = 'invalid data'
         return summary
 
     def get_historical_system_metrics(self):

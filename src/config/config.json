@@ -1,6 +1,6 @@
 {
     "logging": {
-        "level": "INFO",
+        "level": "DEBUG",
         "file_path": "logs/system_monitor.log",
         "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     },
@@ -24,5 +24,6 @@
     },
     "commands": {
         "allowed": ["restart_app", "clear_cache"]
-    }
+    },
+    "alpha_vantage_api_key": "R1JD0TLWMZH2T7OO"
 } 

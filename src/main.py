@@ -47,9 +47,11 @@ def main():
             return processed_data
 
         @app.route('/')
-        # @require_auth
-        def dashboard():
-            return visualizer.get_dashboard()
+        def index():
+            symbols = ['AAPL', 'GOOGL', 'MSFT']  # You can customize this list
+            monitor = StockMonitor(symbols=symbols)
+            metrics = monitor.get_metrics()
+            return visualizer.get_dashboard(metrics)
 
         @app.route('/command', methods=['POST'])
         # @require_auth
