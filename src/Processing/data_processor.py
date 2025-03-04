@@ -1,12 +1,12 @@
 import logging
 import pandas as pd
 from datetime import datetime
-from database import Database
+from Database.database import Database
 
 class DataProcessor:
-    def __init__(self):
+    def __init__(self, database=None):
         self.logger = logging.getLogger(__name__)
-        self.db = Database()
+        self.db = database if database else Database()
         self.max_memory_size = 1000  # Keep last 1000 points in memory for quick access
 
     def process(self, system_data, stock_data):

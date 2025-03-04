@@ -5,6 +5,19 @@ from datetime import datetime
 class SystemMonitor:
     def get_metrics(self):
         """Get current system metrics."""
+        # Get process information
+        process_count = len(psutil.pids())
+        thread_count = 0
+        
+        # Count threads across all processes
+        for proc in psutil.process_iter(['pid', 'num_threads']):
+            try:
+                # Check if num_threads is in proc.info and is not None
+                if 'num_threads' in proc.info and proc.info['num_threads'] is not None:
+                    thread_count += proc.info['num_threads']
+            except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+                pass
+        
         return {
             'timestamp': datetime.now().isoformat(),
             'cpu': {
@@ -22,6 +35,10 @@ class SystemMonitor:
                 'used': psutil.disk_usage('/').used,
                 'free': psutil.disk_usage('/').free,
                 'percent': psutil.disk_usage('/').percent
+            },
+            'processes': {
+                'count': process_count,
+                'threads': thread_count
             },
             'system_info': {
                 'system': platform.system(),

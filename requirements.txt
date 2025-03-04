@@ -4,4 +4,6 @@ flask==3.0.0
 pandas==2.1.1
 plotly==5.17.0
 python-dotenv==1.0.0
-PyJWT==2.8.0 
+PyJWT==2.8.0
+# SQLite is part of Python's standard library, so no additional package needed
+# Chart.js is loaded from CDN in the HTML 
